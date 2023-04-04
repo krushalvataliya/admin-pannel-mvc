@@ -1,0 +1,27 @@
+<?php
+$request = $this->getRequest();
+$productId=$request->getParam('product_id');
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Model/Skin/css/style.css">
+  </head>
+  <body>
+    <?php require_once "View/html/header.phtml" ?>
+    <br>
+    <!-- <form action="<?php echo $this->getModelUrl()->getUrl('insert', 'product_media', ['product_id' => $productId]) ?>" method="POST" enctype="multipart/form-data"> -->
+    <form action="<?php echo $this->getModelUrl()->getUrl('insert','product_media',['product_id'=>$productId]); ?>" method="POST" enctype="multipart/form-data">
+      <table class="table table-bordered">
+        <tr>
+          <th>IMAGE</th>
+          <td> <input type="file" name="fileToUpload"></td>
+        </tr>
+          <th>IMAGE NAME</th>
+          <td><input type="text" name="media[filename]">
+        </td>
+      </table>
+      <input type="submit">
+    </form>
+  </body>
+</html>

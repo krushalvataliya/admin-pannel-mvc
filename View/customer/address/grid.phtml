@@ -1,0 +1,38 @@
+<?php
+$address = $this->getData('customerAddress');
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Model/Skin/css/style.css">
+    <title>view customer</title>
+  </head>
+  <body>
+    <?php require_once "View/html/header.phtml" ?>
+    <div><h3>CUSTOMER ADDRESS</h3></div>
+    
+    <br>
+    
+    <table class="table table-bordered">
+      <tr>
+        
+        <th>ADDRESS_ID</th>
+        <th>ADDRESS</th>
+        <th>CITY</th>
+        <th>STATE</th>
+        <th>COUNTRY</th>
+        <th>ZIP_CODE</th>
+      </tr>
+      <tr>
+        <td><?php echo $address->address_id ?> </td>
+        <td><?php echo $address->address ?></td>
+        <td><?php echo $address->city ?></td>
+        <td><?php echo $address->state ?></td>
+        <td><?php echo $address->country ?></td>
+        <td><?php echo $address->zip_code ?></td>
+        
+      </tr>
+    </table>
+  </body>
+  <?php require_once "View/html/footer.phtml" ?>
+</html>
